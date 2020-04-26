@@ -1,15 +1,19 @@
-// Camera Orbit
-// By T.T
-// --04-28-2018 - changes
-//		- Added smooth camera stop
-//		- Added smooth idle rotation
-//  	- Removed middle click behaviour
-//		- Renamed file to "SmoothCameraOrbit.cs"
+/* Camera Orbit
+ * By T.T
+ * --04-28-2018 - changes
+ *		- Added smooth camera stop
+ *		- Added smooth idle rotation
+ * 	    - Removed middle click behaviour
+ *		- Renamed file to "SmoothCameraOrbit.cs"
+ * --04-20-2020 - changes for BCore
+ *      - GetMouseButton(1) for orbit
+ *      - GetMouseButton(0) for UI Selection
+ */
 
 using UnityEngine;
 using System.Collections;
 
-[AddComponentMenu("Camera-Control/Smooth Mouse Orbit - Unluck Software")]
+[AddComponentMenu("Camera-Control/Smooth Mouse Orbit")]
 public class SmoothCameraOrbit : MonoBehaviour
 {
     public Transform target;
@@ -76,22 +80,22 @@ public class SmoothCameraOrbit : MonoBehaviour
             desiredDistance -= Input.GetAxis("Mouse Y") * Time.deltaTime * zoomRate * 0.125f * Mathf.Abs(desiredDistance);
         }
         //If middle mouse and left alt are selected? ORBIT
-        //else if (Input.GetMouseButton(0))
-        //{
-        //    xDeg += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
-        //    yDeg -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
-        //    //Clamp the vertical axis for the orbit
-        //    yDeg = ClampAngle(yDeg, yMinLimit, yMaxLimit);
-        //    // set camera rotation
-        //    desiredRotation = Quaternion.Euler(yDeg, xDeg, 0);
-        //    currentRotation = transform.rotation;
-        //    rotation = Quaternion.Lerp(currentRotation, desiredRotation, Time.deltaTime * zoomDampening);
-        //    transform.rotation = rotation;
-        //    ///////// Reset idle timers
-        //    idleTimer = 0;
-        //    idleSmooth = 0;
+        else if (Input.GetMouseButton(1))
+        {
+            xDeg += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
+            yDeg -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
+            //Clamp the vertical axis for the orbit
+            yDeg = ClampAngle(yDeg, yMinLimit, yMaxLimit);
+            // set camera rotation
+            desiredRotation = Quaternion.Euler(yDeg, xDeg, 0);
+            currentRotation = transform.rotation;
+            rotation = Quaternion.Lerp(currentRotation, desiredRotation, Time.deltaTime * zoomDampening);
+            transform.rotation = rotation;
+            ///////// Reset idle timers
+            idleTimer = 0;
+            idleSmooth = 0;
 
-        //}
+        }
         else
         {
             //////// Smooth idle rotation
