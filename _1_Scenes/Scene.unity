@@ -2128,7 +2128,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &407123863
 GameObject:
@@ -2484,7 +2484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 418482, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 418482, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2548,7 +2548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 3}
       propertyPath: WispyCloudPosition
-      value: -17.64266
+      value: -33.076862
       objectReference: {fileID: 0}
     - target: {fileID: 11437734, guid: 0409227cdad8af1419458c1c3b2a5ffb, type: 3}
       propertyPath: SunDirLightIntensity
@@ -4610,7 +4610,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &838198162
 GameObject:
