@@ -134,7 +134,7 @@ Prefab里包含模块动画，使用Animator组件实现，有3种Stats:
 ```
 id            - 模块ID, GUID
 name          - 模块名
-mata          - 该模块的Meta信息
+meta          - 该模块的Meta信息
 components    - 数组，包含了构建此模块的所有标准构件, 包括
     component - 使用的标准构件名
     transform - 描述该标准构建的变换，包括位置(Position)，旋转(Rotation)，大小(Scale)。
